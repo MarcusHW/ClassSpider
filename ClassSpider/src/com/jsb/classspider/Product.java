@@ -12,6 +12,8 @@ public class Product {
     private String pcode;
     //说明
     private String description;
+    //网址
+    private String url;
 
     public String getName() {
         return name;
@@ -45,10 +47,19 @@ public class Product {
         this.description = description;
     }
 
-    public Product(String name, String code, String pcode, String description) {
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Product(String name, String code, String pcode, String description, String url) {
         this.name = name;
         this.code = code;
         this.pcode = pcode;
         this.description = description;
+        this.url = url;
     }
 }
