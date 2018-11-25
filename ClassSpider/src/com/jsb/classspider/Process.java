@@ -77,7 +77,7 @@ class Process {
     }
 
     static List<Product> getLevel1() throws IOException {
-        Document document = Jsoup.connect(BASE_URL).get();
+        Document document = Jsoup.connect(BASE_URL).timeout(5000).get();
         Elements elements = document.select("tr.provincetr> td> a:nth-child(1)");
         List<Product> list = new ArrayList<>();
         for (Element element : elements) {
@@ -117,25 +117,16 @@ class Process {
         for (Product product : productList) {
             String pcode = product.getCode();
             String url = BASE_URL + pcode.substring(0, 2) + "/" + pcode + ".html";
-            Document document = Jsoup.connect(url).get();
+            Document document = Jsoup.connect(url).timeout(15000).get();
             Elements elements = document.select("tr.countytr");
             for (Element element : elements) {
-                String name;
-                String code3;
-                if (element.getElementsByTag("a") == null) {
-                    code3 = element.select("td:nth-child(1)").text();
-                    name = element.select("td:nth-child(2)").text();
-                } else {
-                    String href = element.select("td:nth-child(2) > a:nth-child(1)").attr("href");
-                    name = element.select("td:nth-child(2) > a:nth-child(1)").text();
-                    code3 = RegexUtil.findFirst("\\d+.html", href).replace(".html", "");
-                }
-                code3 = code3.length() == 6 ? code3 + "0000" : code3;
+                String code3 = element.select("td:nth-child(1) > a:nth-child(1)").text();
+                String name = element.select("td:nth-child(2) > a:nth-child(1)").text();
                 Product product3 = new Product(name, code3, pcode, "");
-                if (code3.length() == 10) {
-                    save5List.add(product3);
-                } else {
+                if (code3.length() != 10) {
                     list.add(product3);
+                } else {
+                    save5List.add(product3);
                 }
             }
         }
@@ -150,20 +141,11 @@ class Process {
         for (Product product : productList) {
             String pcode = product.getCode();
             String url = BASE_URL + pcode.substring(0, 2) + "/" + pcode.substring(2, 4) + "/" + pcode + ".html";
-            Document document = Jsoup.connect(url).get();
-            Elements elements = document.select("tr.countytr");
+            Document document = Jsoup.connect(url).timeout(5000).get();
+            Elements elements = document.select("tr.towntr");
             for (Element element : elements) {
-                String code4;
-                String name;
-                if (element.getElementsByTag("a") == null) {
-                    code4 = element.select("td:nth-child(1)").text();
-                    name = element.select("td:nth-child(2)").text();
-                } else {
-                    String href = element.select("td:nth-child(2) > a:nth-child(1)").attr("href");
-                    code4 = RegexUtil.findFirst("\\d+.html", href).replace(".html", "");
-                    name = element.select("td:nth-child(2) > a:nth-child(1)").text();
-                }
-                code4 = code4.length() == 8 ? code4 + "00" : code4;
+                String code4 = element.select("td:nth-child(1) > a:nth-child(1)").text();
+                String name = element.select("td:nth-child(2) > a:nth-child(1)").text();
                 Product product4 = new Product(name, code4, pcode, "");
                 if (code4.length() == 10) {
                     save5List.add(product4);
@@ -182,7 +164,7 @@ class Process {
         for (Product product : productList) {
             String pcode = product.getCode();
             String url = BASE_URL + pcode.substring(0, 2) + "/" + pcode.substring(2, 4) + "/" + pcode.substring(4, 6) + "/" + pcode + ".html";
-            Document document = Jsoup.connect(url).get();
+            Document document = Jsoup.connect(url).timeout(5000).get();
             Elements elements = document.select("tr.villagetr");
             for (Element element : elements) {
                 String code5 = element.select("td:nth-child(1)").text();
