@@ -11,11 +11,10 @@ public class Lab {
         Process.saveProductList(list2);
         List<Product> list3 = Process.getLevel3();
         Process.saveProductList(list3);
-        List<Product> list4 = Process.getLevel4();
-        Process.saveProductList(list4);
-        List<Product> list5 = Process.getLevel5();
-        Process.saveProductList(list5);
+//        List<Product> list4 = Process.getLevel4();
+//        Process.saveProductList(list4);
+//        List<Product> list5 = Process.getLevel5();
+//        Process.saveProductList(list5);
 
     }
-
 }

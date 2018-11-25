@@ -73,15 +73,7 @@ class Process {
     }
 
     private static boolean isRightLevelCode(String code, int level) {
-        //todo
-        String substring = code.substring(2 * level + 1, 2 * level + 3);
-        boolean b = code.substring(2 * level -1, 2 * level + 1).equals("0") && code.substring(1, 2).equals("0");
-        boolean a = substring.equals("00");
-        if (a && b) {
-            return true;
-        } else {
-            return false;
-        }
+        return code.length() == level * 2;
     }
 
     static List<Product> getLevel1() throws IOException {
@@ -91,7 +83,6 @@ class Process {
         for (Element element : elements) {
             String href = element.attr("href");
             String code = RegexUtil.findFirst("\\d+.html", href).replace(".html", "");
-            code = code.length() == 10 ? code : code + "00000000";
             String name = element.text().split("-")[1];
             Product product = new Product(name, code, "", "");
             list.add(product);
@@ -105,13 +96,12 @@ class Process {
         List<Product> list = new ArrayList<>();
         for (Product product : productList) {
             String pcode = product.getCode();
-            String url = BASE_URL + pcode.substring(0, 2) + ".html";
-            Document document = Jsoup.connect(url).get();
+            String url = BASE_URL + pcode + ".html";
+            Document document = Jsoup.connect(url).timeout(5000).get();
             Elements elements = document.select("tr.citytr> td:nth-child(2) > a:nth-child(1)");
             for (Element element : elements) {
                 String href = element.attr("href");
                 String code2 = RegexUtil.findFirst("\\d+.html", href).replace(".html", "");
-                code2 = code2.length() == 10 ? code2 : code2 + "000000";
                 String name = element.text();
                 Product product2 = new Product(name, code2, pcode, "");
                 list.add(product2);
