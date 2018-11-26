@@ -296,6 +296,7 @@ public class ProcessImpl implements Process {
             String Pcode = product.getCode();
             String url = product.getUrl();
             try {
+                Thread.sleep(1000);
                 org.jsoup.nodes.Document document = Jsoup.connect(url).timeout(7000).get();
                 Elements villagetr = document.getElementsByClass("villagetr");
                 if (villagetr.size() > 0) {

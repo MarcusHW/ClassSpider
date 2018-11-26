@@ -45,7 +45,7 @@ public class Lab2 {
         if (timeOut5.getProductList().size() > 0) {
             ProductTimeOut resObj5 = process.getEndLevel(timeOut5.getProductList());
             if (resObj5.getProductList().size() > 0) {
-                ProductTimeOut obj5 = process.getEndLevel(resObj5.getProductList());
+                process.getEndLevel(resObj5.getProductList());
             }
         }
     }
