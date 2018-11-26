@@ -111,6 +111,7 @@ public class ProcessImpl implements Process {
                     save5List.add(product);
                     continue;
                 }
+
                 List<String> classList = new ArrayList<>();
                 classList.add("citytr");
                 classList.add("countytr");
