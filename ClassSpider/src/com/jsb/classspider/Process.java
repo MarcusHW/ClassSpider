@@ -7,6 +7,7 @@ import java.util.List;
 public interface Process {
     public List<Product> redownList = new ArrayList<>();
 
+
     /**
      * 检查是否存在，不存在添加
      *
@@ -38,9 +39,11 @@ public interface Process {
 
     public boolean isRightLevelCode(String code, int level);
 
-    public void reDown();
-
     public List<Product> getReDownList(int level);
 
     public void removeReDown(Product product);
+
+    public ResObj getNormalLevel(List<Product> list, String level) throws IOException;
+
+    public ProductTimeOut getEndLevel(List<Product> list) throws IOException;
 }

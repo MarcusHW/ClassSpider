@@ -19,6 +19,7 @@ import java.util.List;
 public class ProcessImpl implements Process {
     private static String BASE_URL = "http://www.stats.gov.cn/tjsj/tjbz/tjypflml/2010/";
 
+
     @Override
     public void
     saveProductList(List<Product> list) {
@@ -73,10 +74,13 @@ public class ProcessImpl implements Process {
         while (iterator.hasNext()) {
             org.bson.Document next = iterator.next();
             String code = next.get("代码", String.class);
-            if (code.length() == 8 || code.length() == 10) {
-                Product product = new Product(next.get("产品名称", String.class), next.get("代码", String.class),
-                        next.get("父代码", String.class), next.get("说明", String.class), next.get("网址", String.class));
-                list.add(product);
+            String url = next.get("网址", String.class);
+            if (!url.contains("完")) {
+                if (code.length() == 8 || code.length() == 10) {
+                    Product product = new Product(next.get("产品名称", String.class), next.get("代码", String.class),
+                            next.get("父代码", String.class), next.get("说明", String.class), next.get("网址", String.class));
+                    list.add(product);
+                }
             }
         }
         return list;
@@ -145,7 +149,7 @@ public class ProcessImpl implements Process {
                         save5List.add(product3);
                     }
                 }
-                removeReDown(product);
+//                removeReDown(product);
             } catch (Exception e) {
                 System.out.println("3级超时:" + url);
                 product.setDescription("3");
@@ -170,15 +174,15 @@ public class ProcessImpl implements Process {
                 for (Element element : elements) {
                     String code4 = element.select("td:nth-child(1) > a:nth-child(1)").text();
                     String name = element.select("td:nth-child(2) > a:nth-child(1)").text();
-
-                    Product product4 = new Product(name, code4, pcode, "", "");
+                    String href = element.select("td:nth-child(2) > a:nth-child(1)").attr("href");
+                    Product product4 = new Product(name, code4, pcode, "", BASE_URL + code4.substring(0, 2) + "/" + code4.substring(2, 4) + "/" + href);
                     if (code4.length() == 10) {
                         save5List.add(product4);
                     } else {
                         list.add(product4);
                     }
                 }
-                removeReDown(product);
+//                removeReDown(product);
             } catch (Exception e) {
                 System.out.println("4级超时:" + url);
                 product.setDescription("4");
@@ -203,10 +207,10 @@ public class ProcessImpl implements Process {
                     String code5 = element.select("td:nth-child(1)").text();
                     String name = elements.select("td:nth-child(2)").text();
                     String description = elements.select("td:nth-child(3)").text();
-                    Product product4 = new Product(name, code5, pcode, description, "");
+                    Product product4 = new Product(name, code5, pcode, description, "完");
                     list.add(product4);
                 }
-                removeReDown(product);
+//                removeReDown(product);
             } catch (Exception e) {
                 System.out.println("5级超时:" + url);
                 product.setDescription("5");
@@ -229,9 +233,10 @@ public class ProcessImpl implements Process {
                 for (Element element : elements) {
                     String code5 = element.select("td:nth-child(1)").text();
                     String description = elements.select("td:nth-child(3)").text();
-                    Product product4 = new Product(elements.select("td:nth-child(2)").text(), code5, pcode, description, "");
+                    Product product4 = new Product(elements.select("td:nth-child(2)").text(), code5, pcode, description, "完");
                     list.add(product4);
                 }
+//                removeReDown(product);
             } catch (Exception e) {
                 System.out.println("存5超时:" + url);
                 product.setDescription(String.valueOf(level));
@@ -244,28 +249,6 @@ public class ProcessImpl implements Process {
     @Override
     public boolean isRightLevelCode(String code, int level) {
         return code.length() == level * 2;
-    }
-
-    @Override
-    public void reDown() {
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase mongoDatabase = mongoClient.getDatabase("ryze");
-        MongoCollection<Document> collection = mongoDatabase.getCollection("REDOWN");
-        List<org.bson.Document> docList = new ArrayList<>();
-        for (Product product : redownList) {
-            org.bson.Document document = new org.bson.Document();
-            document.append("产品名称", product.getName());
-            document.append("代码", product.getCode());
-            document.append("父代码", product.getPcode());
-            document.append("说明", StringUtil.removeAllBlank(product.getDescription()));
-            document.append("网址", product.getUrl());
-            if (collection.count(document) == 0) {
-                docList.add(document);
-            }
-        }
-        if (docList.size() > 0) {
-            collection.insertMany(docList);
-        }
     }
 
     @Override
@@ -304,5 +287,81 @@ public class ProcessImpl implements Process {
         }
     }
 
+    @Override
+    public ResObj getNormalLevel(List<Product> list, String level) throws IOException {
+        List<Product> timeOutList = new ArrayList<>();
+        List<Product> save5List = new ArrayList<>();
+        List<Product> realList = new ArrayList<>();
+        for (Product product : list) {
+            String Pcode = product.getCode();
+            String url = product.getUrl();
+            try {
+                org.jsoup.nodes.Document document = Jsoup.connect(url).timeout(7000).get();
+                Elements villagetr = document.getElementsByClass("villagetr");
+                if (villagetr.size() > 0) {
+                    save5List.add(product);
+                    continue;
+                }
+                List<String> classList = new ArrayList<>();
+                classList.add("citytr");
+                classList.add("countytr");
+                classList.add("towntr");
+                for (String s : classList) {
+                    Elements elements = document.getElementsByClass(s);
+                    if (elements == null) {
+                        continue;
+                    }
+                    for (Element element : elements) {
+                        String code = element.select("td:nth-child(1) > a:nth-child(1)").text();
+                        String name = element.select("td:nth-child(2) > a:nth-child(1)").text();
+                        String href = element.select("td:nth-child(2) > a:nth-child(1)").attr("href");
+                        String jumpUrl = "";
+                        if (s.equals("citytr")) {
+                            jumpUrl = BASE_URL + href;
+                        } else if (s.equals("countytr")) {
+                            jumpUrl = BASE_URL + code.substring(0, 2) + "/" + href;
+                        } else {
+                            jumpUrl = BASE_URL + code.substring(0, 2) + "/" + code.substring(2, 4) + "/" + href;
+                        }
+                        Product pro = new Product(name, code, Pcode, "", jumpUrl);
+                        if (code.length() == 8 || code.length() == 10) {
+                            save5List.add(pro);
+                        } else {
+                            realList.add(pro);
+                            //todo
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("延时:" + url);
+                timeOutList.add(product);
+            }
+        }
+        saveProductList(realList);
+        return new ResObj(save5List, new ProductTimeOut(timeOutList, level));
+    }
 
+    @Override
+    public ProductTimeOut getEndLevel(List<Product> list) throws IOException {
+        List<Product> timeOutList = new ArrayList<>();
+        List<Product> saveList = new ArrayList<>();
+        for (Product product : list) {
+            String pCode = product.getCode();
+            String url = product.getUrl();
+            try {
+                org.jsoup.nodes.Document document = Jsoup.connect(url).timeout(7000).get();
+                Elements elements = document.select("tr.villagetr");
+                for (Element element : elements) {
+                    String code5 = element.select("td:nth-child(1)").text();
+                    String description = elements.select("td:nth-child(3)").text();
+                    Product product4 = new Product(elements.select("td:nth-child(2)").text(), code5, pCode, description, "完");
+                    saveList.add(product4);
+                }
+            } catch (Exception e) {
+                timeOutList.add(product);
+            }
+        }
+        saveProductList(saveList);
+        return new ProductTimeOut(timeOutList, "4");
+    }
 }
