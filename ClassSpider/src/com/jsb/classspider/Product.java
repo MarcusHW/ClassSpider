@@ -1,8 +1,6 @@
 package com.jsb.classspider;
 
 public class Product {
-    //uu id
-//    private String id;
 
     //产品名称
     private String name;

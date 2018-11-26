@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebc8bce-eaea-43b2-8a45-f2437b463177" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassSpider/ClassSpider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/ClassSpider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,35 +17,64 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1271">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2864#2865#0" expanded="true" />
-                <element signature="e#2892#2893#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="370">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +97,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImp.java" />
+        <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java" />
@@ -76,10 +106,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1913" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -87,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,20 +139,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543163129685" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cs/lib" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543201964148" />
+    <property name="last_opened_file_path" value="F:/0.test/0.lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,28 +197,30 @@
       <updated>1542991966714</updated>
       <workItem from="1542991968453" duration="383000" />
       <workItem from="1543148672992" duration="10985000" />
+      <workItem from="1543195130478" duration="6375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11368000" />
+    <option name="totallyTimeSpent" value="17743000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49889624" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49889624" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" sideWeight="0.50110376" side_tool="true" weight="0.1684435" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Tail" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.21633554" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" visible="true" weight="0.22295806" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.15342164" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.1401766" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.22295806" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.14086021" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.20752688" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -243,6 +274,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/CFTools.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -251,17 +294,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/List.java" />
     <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2242">
-          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="8" />
           <folding>
             <element signature="e#301#302#0" expanded="true" />
             <element signature="e#328#329#0" expanded="true" />
@@ -287,36 +324,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
+    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1271">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        <state relative-caret-position="370">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2864#2865#0" expanded="true" />
-            <element signature="e#2892#2893#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="210">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java">
+    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
