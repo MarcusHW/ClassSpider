@@ -98,8 +98,8 @@ public class ProcessImpl implements Process {
     public ResObj getNormalLevel(List<Product> list, String level) {
         List<Product> timeOutList = new ArrayList<>();
         List<Product> save5List = new ArrayList<>();
-        List<Product> realList = new ArrayList<>();
         for (Product product : list) {
+            List<Product> realList = new ArrayList<>();
             String Pcode = product.getCode();
             String url = product.getUrl();
             try {
@@ -145,8 +145,9 @@ public class ProcessImpl implements Process {
                 System.out.println("延时:" + url);
                 timeOutList.add(product);
             }
+            saveProductList(realList);
         }
-        saveProductList(realList);
+
         return new ResObj(save5List, new ProductTimeOut(timeOutList, level));
     }
 
