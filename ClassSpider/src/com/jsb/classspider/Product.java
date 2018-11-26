@@ -1,5 +1,6 @@
 package com.jsb.classspider;
 
+
 public class Product {
 
     //产品名称
@@ -12,6 +13,8 @@ public class Product {
     private String description;
     //网址
     private String url;
+    //级别
+    private String webLevel;
 
     public String getName() {
         return name;
@@ -53,11 +56,20 @@ public class Product {
         this.url = url;
     }
 
-    public Product(String name, String code, String pcode, String description, String url) {
+    public String getWebLevel() {
+        return webLevel;
+    }
+
+    public void setWebLevel(String webLevel) {
+        this.webLevel = webLevel;
+    }
+
+    public Product(String name, String code, String pcode, String description, String url, String webLevel) {
         this.name = name;
         this.code = code;
         this.pcode = pcode;
         this.description = description;
         this.url = url;
+        this.webLevel = webLevel;
     }
 }

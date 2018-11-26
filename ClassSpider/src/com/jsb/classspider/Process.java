@@ -27,23 +27,8 @@ public interface Process {
 
     public void getLevell() throws IOException;
 
-    public void getLevel2();
-
-    public void getLevel3();
-
-    public void getLevel4();
-
-    public void getLevel5();
-
-    public void save5(List<Product> proList, int level);
-
-    public boolean isRightLevelCode(String code, int level);
-
-    public List<Product> getReDownList(int level);
-
-    public void removeReDown(Product product);
 
     public ResObj getNormalLevel(List<Product> list, String level) throws IOException;
 
-    public ProductTimeOut getEndLevel(List<Product> list) throws IOException;
+    public ProductTimeOut getEndLevel(List<Product> list) throws IOException, InterruptedException;
 }
