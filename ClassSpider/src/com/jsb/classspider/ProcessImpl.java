@@ -2,10 +2,12 @@ package com.jsb.classspider;
 
 import com.dataofbank.ryze.util.RegexUtil;
 import com.dataofbank.ryze.util.StringUtil;
-import com.mongodb.MongoClient;
+import com.jsb.classspider.Dao.MongoDao;
+import com.jsb.classspider.Model.Product;
+import com.jsb.classspider.Model.ProductTimeOut;
+import com.jsb.classspider.Model.ResObj;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
@@ -22,9 +24,7 @@ public class ProcessImpl implements Process {
     @Override
     public void
     saveProductList(List<Product> list) {
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase mongoDatabase = mongoClient.getDatabase("ryze");
-        MongoCollection<Document> collection = mongoDatabase.getCollection("PRODUCT");
+        MongoCollection<Document> collection = MongoDao.getCollection("PRODUCT");
         List<org.bson.Document> docList = new ArrayList<>();
         for (Product product : list) {
             org.bson.Document document = new org.bson.Document();
@@ -46,9 +46,7 @@ public class ProcessImpl implements Process {
     @Override
     public List<Product> getProductList(int Level) {
         List<Product> list = new ArrayList<>();
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase mongoDatabase = mongoClient.getDatabase("ryze");
-        MongoCollection<org.bson.Document> collection = mongoDatabase.getCollection("PRODUCT");
+        MongoCollection<Document> collection = MongoDao.getCollection("PRODUCT");
         Document query = new Document();
         query.append("级别", String.valueOf(Level));
         FindIterable<Document> findIterable = collection.find(query);
@@ -67,14 +65,11 @@ public class ProcessImpl implements Process {
     @Override
     public List<Product> getLastLevelList() {
         List<Product> list = new ArrayList<>();
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase mongoDatabase = mongoClient.getDatabase("ryze");
-        MongoCollection<org.bson.Document> collection = mongoDatabase.getCollection("PRODUCT");
+        MongoCollection<Document> collection = MongoDao.getCollection("PRODUCT");
         FindIterable<Document> findIterable = collection.find();
         for (Document next : findIterable) {
             String webLevel = next.get("级别", String.class);
             String code = next.get("代码", String.class);
-            String url = next.get("网址", String.class);
             if (code.length() == 8 || code.length() == 10 || webLevel.equals("4")) {
                 Product product = new Product(next.get("产品名称", String.class), next.get("代码", String.class),
                         next.get("父代码", String.class), next.get("说明", String.class), next.get("网址", String.class), next.get("级别", String.class));
@@ -85,7 +80,7 @@ public class ProcessImpl implements Process {
     }
 
     @Override
-    public void getLevell() throws IOException {
+    public void getLevel1() throws IOException {
         org.jsoup.nodes.Document document = Jsoup.connect(BASE_URL).timeout(5000).get();
         Elements elements = document.select("tr.provincetr> td> a:nth-child(1)");
         List<Product> list = new ArrayList<>();
@@ -100,7 +95,7 @@ public class ProcessImpl implements Process {
     }
 
     @Override
-    public ResObj getNormalLevel(List<Product> list, String level) throws IOException {
+    public ResObj getNormalLevel(List<Product> list, String level) {
         List<Product> timeOutList = new ArrayList<>();
         List<Product> save5List = new ArrayList<>();
         List<Product> realList = new ArrayList<>();
@@ -143,7 +138,6 @@ public class ProcessImpl implements Process {
                             save5List.add(pro);
                         } else {
                             realList.add(pro);
-                            //todo
                         }
                     }
                 }
@@ -157,7 +151,7 @@ public class ProcessImpl implements Process {
     }
 
     @Override
-    public ProductTimeOut getEndLevel(List<Product> list) throws IOException, InterruptedException {
+    public ProductTimeOut getEndLevel(List<Product> list) throws InterruptedException {
         List<Product> timeOutList = new ArrayList<>();
         List<Product> saveList = new ArrayList<>();
         for (Product product : list) {

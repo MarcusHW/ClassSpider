@@ -1,4 +1,4 @@
-package com.jsb.classspider;
+package com.jsb.classspider.Model;
 
 import java.util.ArrayList;
 import java.util.List;

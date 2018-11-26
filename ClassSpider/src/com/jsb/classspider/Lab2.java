@@ -1,5 +1,9 @@
 package com.jsb.classspider;
 
+import com.jsb.classspider.Model.Product;
+import com.jsb.classspider.Model.ProductTimeOut;
+import com.jsb.classspider.Model.ResObj;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -7,7 +11,7 @@ public class Lab2 {
     public static void main(String[] args) throws IOException, InterruptedException {
         ProcessImpl process = new ProcessImpl();
         //存1
-        process.getLevell();
+        process.getLevel1();
         //取1存2
         List<Product> list1 = process.getProductList(1);
         ResObj resObj2 = process.getNormalLevel(list1, "2");

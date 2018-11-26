@@ -1,34 +1,35 @@
 package com.jsb.classspider;
 
+import com.jsb.classspider.Model.Product;
+import com.jsb.classspider.Model.ProductTimeOut;
+import com.jsb.classspider.Model.ResObj;
+
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public interface Process {
-    public List<Product> redownList = new ArrayList<>();
-
 
     /**
      * 检查是否存在，不存在添加
      *
      * @param list 数据数组
      */
-    public void saveProductList(List<Product> list);
+    void saveProductList(List<Product> list);
 
     /**
      * 得到指定层级的product List
      *
-     * @param level 层级
+     * @param Level 层级
      * @return Product List
      */
-    public List<Product> getProductList(int Level);
+    List<Product> getProductList(int Level);
 
-    public List<Product> getLastLevelList();
+    List<Product> getLastLevelList();
 
-    public void getLevell() throws IOException;
+    void getLevel1() throws IOException;
 
 
-    public ResObj getNormalLevel(List<Product> list, String level) throws IOException;
+    ResObj getNormalLevel(List<Product> list, String level) throws IOException;
 
-    public ProductTimeOut getEndLevel(List<Product> list) throws IOException, InterruptedException;
+    ProductTimeOut getEndLevel(List<Product> list) throws IOException, InterruptedException;
 }
