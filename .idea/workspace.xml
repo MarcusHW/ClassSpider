@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebc8bce-eaea-43b2-8a45-f2437b463177" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/CFTools.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/Lab.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/Lab2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/Process.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/ProcessImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/ProductTimeOut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClassSpider/com/jsb/classspider/ResObj.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="1069">
+              <caret line="131" column="44" lean-forward="true" selection-start-line="131" selection-start-column="44" selection-end-line="131" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,17 +130,6 @@
               <item name="ClassSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClassSpider" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ClassSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="classspider" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -166,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543222267294" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543222782240" />
     <property name="last_opened_file_path" value="F:/0.test/0.lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -236,18 +211,17 @@
       <workItem from="1543195130478" duration="19409000" />
       <workItem from="1543217612769" duration="149000" />
       <workItem from="1543217771052" duration="90000" />
-      <workItem from="1543217912169" duration="4348000" />
+      <workItem from="1543217912169" duration="4881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35364000" />
+    <option name="totallyTimeSpent" value="35897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49889624" visible="true" weight="0.13752665" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49889624" visible="true" weight="0.13752665" />
       <window_info id="Structure" order="1" sideWeight="0.50110376" side_tool="true" weight="0.1684435" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -258,7 +232,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3688172" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.21075268" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.38064516" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.5516129" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -427,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="1069">
+          <caret line="131" column="44" lean-forward="true" selection-start-line="131" selection-start-column="44" selection-end-line="131" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
