@@ -38,10 +38,13 @@ public class Lab2 {
         List<Product> list3 = process.getProductList(3);
         ResObj resObj4 = process.getNormalLevel(list3, "4");
         process.saveProductList(resObj4.getSave5List());
-        ResObj obj4 = process.getNormalLevel(resObj4.getProductTimeOut().getProductList(), "4");
-        if (obj4.getProductTimeOut().getProductList().size() > 0) {
-            process.getNormalLevel(obj4.getProductTimeOut().getProductList(), "4");
+        if (resObj4.getProductTimeOut().getProductList().size() > 0) {
+            ResObj obj4 = process.getNormalLevel(resObj4.getProductTimeOut().getProductList(), "4");
             process.saveProductList(obj4.getSave5List());
+            if (obj4.getProductTimeOut().getProductList().size() > 0) {
+                ResObj ob4 = process.getNormalLevel(obj4.getProductTimeOut().getProductList(), "4");
+                process.saveProductList(ob4.getSave5List());
+            }
         }
 
         //取3 4 的得5

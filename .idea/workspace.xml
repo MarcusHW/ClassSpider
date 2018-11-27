@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aebc8bce-eaea-43b2-8a45-f2437b463177" name="Default Changelist" comment="" />
+    <list default="true" id="aebc8bce-eaea-43b2-8a45-f2437b463177" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,25 +13,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+            <state relative-caret-position="506">
+              <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1543227632452" expanded="true" signature="4427:6406" ph="..." />
-                <marker date="1543227632452" expanded="true" signature="4448:6064" ph="..." />
+                <marker date="1543227637748" expanded="true" signature="4427:6390" ph="..." />
+                <marker date="1543227637748" expanded="true" signature="4448:6048" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="248">
+              <caret line="41" column="100" lean-forward="true" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,20 +73,19 @@
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ResObj.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Product.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/MongoDao.java" />
-        <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Process.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Model/ResObj.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Model/ProductTimeOut.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Dao/MongoDao.java" />
         <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java" />
+        <option value="$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,7 +122,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543227678236" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543281509972" />
     <property name="last_opened_file_path" value="F:/0.test/0.lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -191,15 +192,15 @@
       <workItem from="1543195130478" duration="19409000" />
       <workItem from="1543217612769" duration="149000" />
       <workItem from="1543217771052" duration="90000" />
-      <workItem from="1543217912169" duration="9704000" />
+      <workItem from="1543217912169" duration="15271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40720000" />
+    <option name="totallyTimeSpent" value="46287000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49889624" visible="true" weight="0.19989339" />
@@ -213,7 +214,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3688172" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.21075268" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.2204301" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -349,16 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -376,12 +367,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/ProcessImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+        <state relative-caret-position="506">
+          <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1543227632452" expanded="true" signature="4427:6406" ph="..." />
-            <marker date="1543227632452" expanded="true" signature="4448:6064" ph="..." />
+            <marker date="1543227637748" expanded="true" signature="4427:6390" ph="..." />
+            <marker date="1543227637748" expanded="true" signature="4448:6048" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassSpider/src/com/jsb/classspider/Lab2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="41" column="100" lean-forward="true" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
